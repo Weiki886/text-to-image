@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字转图片应用</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>文字转图片工具</h1>
+        <div class="text-input-area">
+            <textarea id="textInput" placeholder="请在此输入您要转换的文字..."></textarea>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="fontSize">字体大小:</label>
+                    <input type="range" id="fontSize" min="12" max="72" value="24">
+                    <span id="fontSizeDisplay">24px</span>
+                </div>
+                <div class="control-group">
+                    <label for="fontFamily">字体样式:</label>
+                    <select id="fontFamily">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="SimSun">宋体</option>
+                        <option value="Microsoft YaHei">微软雅黑</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="textColor">文字颜色:</label>
+                    <input type="color" id="textColor" value="#000000">
+                </div>
+                <div class="control-group">
+                    <label for="bgColor">背景颜色:</label>
+                    <input type="color" id="bgColor" value="#FFFFFF">
+                </div>
+            </div>
+            <button id="generateBtn">生成图片</button>
+        </div>
+        <div class="preview-area">
+            <h2>预览</h2>
+            <div class="canvas-container">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="download-controls">
+                <button id="downloadBtn" disabled>下载图片</button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-description">
+        © Weiki 文字转图片工具 | 完全在浏览器中运行，您的数据不会上传至任何服务器
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
